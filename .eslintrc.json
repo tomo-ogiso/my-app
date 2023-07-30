@@ -1,3 +1,40 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "react/display-name": 0,
+    // インポートの順番を整える
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+        "pathGroups": [
+          {
+            "pattern": "@/_api/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/_components/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/_constants/**",
+            "group": "internal",
+            "position": "before"
+          }
+        ],
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+    "unused-imports/no-unused-imports": "error", // 未使用のインポートがある場合は、エラーを表示
+    "no-unused-vars": "off", // 未使用の変数があるときにエラーまたは警告を出すのを無効化(unused-importsで設定するため)
+    "unused-imports/no-unused-vars": [
+      // 未使用の変数または引数がある場合はワーニングをだす、ただアンダースコアから始まるものは除外する
+      "warn",
+      { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+    ]
+  },
+  // unused-imports:未使用インポートを自動で削除してくれるライブラリ
+  "plugins": ["unused-imports"]
 }

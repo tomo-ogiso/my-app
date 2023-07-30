@@ -1,0 +1,9 @@
+node_modules
+.next
+package-lock.json
+public
+next-env.d.ts
+.github
+.eslintrc.json
+.prettierrc
+tsconfig.json
