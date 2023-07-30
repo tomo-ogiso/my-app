@@ -1,0 +1,14 @@
+node_modules
+.next
+yarn.lock
+package-lock.json
+public
+next-env.d.ts
+.github
+/src/openapi/*
+openapi.yml
+.eslintrc.js
+.prettierrc
+*.scss
+tsconfig.json
+/src/utils/$path.ts
