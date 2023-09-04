@@ -34,16 +34,25 @@ export default async function Home() {
       <Imgix
         src="https://test-281330813.imgix.net/images/pexels-anastasia-shuraeva-4100795.jpg"
         // imgixParams={{ ar: '16:9' }}
-        width={300}
-        height={200}
+        width={400}
+        height={300}
       />
-      <Image src="/images/11bdd38c-f0fa-46ff-b42a-8d8b4cbf1d0f.jpg" alt="猫" width={300} height={200} />
-      <Imgix
-        src="https://test-281330813.imgix.net/images/11bdd38c-f0fa-46ff-b42a-8d8b4cbf1d0f.jpg"
-        // imgixParams={{ ar: '16:9' }}
-        width={300}
-        height={200}
-      />
+      <div className="max-w-[880px] flex flex-col gap-y-3">
+        <Image
+          src="/images/11bdd38c-f0fa-46ff-b42a-8d8b4cbf1d0f.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          layout="responsive"
+          objectFit="contain"
+        />
+        <Imgix
+          src="https://test-281330813.imgix.net/images/11bdd38c-f0fa-46ff-b42a-8d8b4cbf1d0f.jpg"
+          imgixParams={{ ar: '3:2' }}
+          // width={400}
+          // height={300}
+        />
+      </div>
     </main>
   );
 }
