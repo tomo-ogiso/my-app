@@ -2,6 +2,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import '@radix-ui/themes/styles.css';
 import 'react-loading-skeleton/dist/skeleton.css';
 
+import { Box, Text } from '@radix-ui/themes';
 import Image from 'next/image';
 import Imgix from 'react-imgix';
 
@@ -23,6 +24,16 @@ export default async function Home() {
   return (
     <main className="max-w-5xl mx-auto mt-16">
       <div className="max-w-[880px] grid grid-cols-2 gap-3">
+        <Box className="border-[skyBlue] border-b-2 border-solid">
+          <Text as="p" className="text-center font-semibold">
+            next/image
+          </Text>
+        </Box>
+        <Box className="border-[skyBlue] border-b-2 border-solid">
+          <Text as="p" className="text-center font-semibold">
+            imgix
+          </Text>
+        </Box>
         <Image
           src="/images/11bdd38c-f0fa-46ff-b42a-8d8b4cbf1d0f.jpg"
           alt="猫"
