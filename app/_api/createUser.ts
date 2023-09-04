@@ -4,7 +4,7 @@ type CreateUserRequest = {
 };
 
 export const createUser = async (params: CreateUserRequest) => {
-  const response = await fetch('http://localhost:3001/users', {
+  const response = await fetch(`${process.env.API_DOMAIN}/users`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

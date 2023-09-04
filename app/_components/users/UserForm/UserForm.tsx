@@ -1,19 +1,22 @@
 'use client';
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { Box, Button } from '@kuma-ui/core';
 import { FC } from 'react';
+
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Box, TextField } from '@radix-ui/themes';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
+
 import { createUser } from '@/_api/createUser';
-import { FormBlock, RhfInput } from '@/_components/common';
+import { FormBlock } from '@/_components/common';
+import { Button } from '@/components/ui/button';
+
 import { schema, UserFormType } from './schema';
-import 'react-toastify/dist/ReactToastify.css';
 
 export const UserForm: FC = () => {
   const {
     handleSubmit,
-    control,
+    register,
     formState: { errors },
   } = useForm<UserFormType>({
     mode: 'onChange',
@@ -40,29 +43,18 @@ export const UserForm: FC = () => {
   };
 
   return (
-    <Box bgColor="whitesmoke" p={12} borderRadius={8}>
+    <Box className="bg-slate-100 rounded-lg" p="3">
       <form onSubmit={handleSubmit(onSubmit)}>
         <FormBlock label="名前" errorMessage={errors.name?.message} className="mb-4 w-80">
-          <RhfInput name="name" control={control} placeholder="名前" />
+          <TextField.Input placeholder="名前" radius="medium" {...register('name')} />
         </FormBlock>
         <FormBlock label="メールアドレス" errorMessage={errors.email?.message} className="mb-4 w-80">
-          <RhfInput name="email" control={control} placeholder="メールアドレス" />
+          <TextField.Input placeholder="メールアドレス" radius="medium" {...register('email')} />
         </FormBlock>
-        <Box>
-          <Button
-            type="submit"
-            width={180}
-            bgColor="#242424"
-            borderRadius={8}
-            py={12}
-            px={16}
-            color="#fff"
-            transition="all"
-            _hover={{ opacity: 0.8 }}
-          >
-            送信
-          </Button>
-        </Box>
+        <Button type="submit" className="w-40">
+          送信
+        </Button>
+        <div />
       </form>
     </Box>
   );

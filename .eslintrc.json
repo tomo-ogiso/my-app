@@ -1,5 +1,5 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": ["next/core-web-vitals"],
   "rules": {
     "react/display-name": 0,
     // インポートの順番を整える
@@ -9,22 +9,34 @@
         "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
         "pathGroups": [
           {
-            "pattern": "@/_api/**",
+            "pattern": "react",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "@/_api/*/**",
             "group": "internal",
             "position": "before"
           },
           {
-            "pattern": "@/_components/**",
+            "pattern": "@/_components/*/**",
             "group": "internal",
             "position": "before"
           },
           {
-            "pattern": "@/_constants/**",
+            "pattern": "@/_constants/*/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/_interfaces/*/**",
             "group": "internal",
             "position": "before"
           }
         ],
-        "alphabetize": { "order": "asc", "caseInsensitive": true }
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": ["builtin", "object"]
       }
     ],
     "unused-imports/no-unused-imports": "error", // 未使用のインポートがある場合は、エラーを表示
@@ -33,8 +45,8 @@
       // 未使用の変数または引数がある場合はワーニングをだす、ただアンダースコアから始まるものは除外する
       "warn",
       { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
-    ]
+    ],
+    "react/self-closing-comp": "error" // 子なしのコンポーネントに余分な終了タグを付けない
   },
-  // unused-imports:未使用インポートを自動で削除してくれるライブラリ
-  "plugins": ["unused-imports"]
+  "plugins": ["unused-imports"] // unused-imports:未使用インポートを自動で削除してくれるライブラリ
 }

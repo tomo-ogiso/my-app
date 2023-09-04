@@ -1,7 +1,8 @@
 import './globals.css';
-import { KumaRegistry } from '@kuma-ui/next-plugin/registry';
+import { Theme } from '@radix-ui/themes';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+
 import { Providers } from './providers';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -15,9 +16,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <KumaRegistry>
+        <Theme>
           <Providers>{children}</Providers>
-        </KumaRegistry>
+        </Theme>
       </body>
     </html>
   );

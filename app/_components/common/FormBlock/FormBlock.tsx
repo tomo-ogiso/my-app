@@ -1,5 +1,6 @@
-import { Box, Text } from '@kuma-ui/core';
 import { FC, ReactNode } from 'react';
+
+import { Box, Text } from '@radix-ui/themes';
 
 type Props = {
   label: string;
@@ -11,12 +12,12 @@ type Props = {
 export const FormBlock: FC<Props> = ({ label, className, children, errorMessage }) => {
   return (
     <Box className={className}>
-      <Text as="label" fontWeight="bold" display="block" mb={8}>
+      <Text as="p" className="mb-2">
         {label}
       </Text>
       {children}
       {errorMessage && (
-        <Text color="red" mt={8}>
+        <Text as="p" color="red" className="mt-2">
           {errorMessage}
         </Text>
       )}
