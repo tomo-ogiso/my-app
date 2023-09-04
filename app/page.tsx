@@ -2,6 +2,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import '@radix-ui/themes/styles.css';
 import 'react-loading-skeleton/dist/skeleton.css';
 
+import Image from 'next/image';
+import Imgix from 'react-imgix';
+
 import { UserList } from '@/_components/users';
 
 import { Users } from './_interfaces/User';
@@ -27,6 +30,20 @@ export default async function Home() {
       </Heading> */}
       {/* <UserForm />
        */}
+      <Image src={'/images/pexels-anastasia-shuraeva-4100795.jpg'} alt="なんらかの画像" width={300} height={200} />
+      <Imgix
+        src="https://test-281330813.imgix.net/images/pexels-anastasia-shuraeva-4100795.jpg"
+        // imgixParams={{ ar: '16:9' }}
+        width={300}
+        height={200}
+      />
+      <Image src="/images/11bdd38c-f0fa-46ff-b42a-8d8b4cbf1d0f.jpg" alt="猫" width={300} height={200} />
+      <Imgix
+        src="https://test-281330813.imgix.net/images/11bdd38c-f0fa-46ff-b42a-8d8b4cbf1d0f.jpg"
+        // imgixParams={{ ar: '16:9' }}
+        width={300}
+        height={200}
+      />
     </main>
   );
 }
