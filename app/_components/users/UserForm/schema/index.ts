@@ -1,4 +1,5 @@
 import { z } from 'zod';
+
 import { REQUIRED_INPUT_ERROR, EMAIL_ERROR } from '@/_constants/errorMessage';
 
 export const schema = z.object({
