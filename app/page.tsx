@@ -34,7 +34,15 @@ export default async function Home() {
             imgix
           </Text>
         </Box>
-        <Image src="/images/image.jpg" alt="猫" width={3} height={2} layout="responsive" objectFit="contain" priority />
+        <Image
+          src="/images/image.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          loading="lazy"
+          layout="responsive"
+          objectFit="contain"
+        />
         <Imgix
           src="https://test-281330813.imgix.net/images/image.jpg"
           imgixParams={{ ar: '3:2' }}
@@ -46,7 +54,7 @@ export default async function Home() {
           alt="猫"
           width={3}
           height={2}
-          priority
+          loading="lazy"
           layout="responsive"
           objectFit="contain"
         />
@@ -61,7 +69,7 @@ export default async function Home() {
           alt="猫"
           width={3}
           height={2}
-          priority
+          loading="lazy"
           layout="responsive"
           objectFit="contain"
         />
@@ -76,7 +84,7 @@ export default async function Home() {
           alt="猫"
           width={3}
           height={2}
-          priority
+          loading="lazy"
           layout="responsive"
           objectFit="contain"
         />
@@ -91,7 +99,7 @@ export default async function Home() {
           alt="猫"
           width={3}
           height={2}
-          priority
+          loading="lazy"
           layout="responsive"
           objectFit="contain"
         />
