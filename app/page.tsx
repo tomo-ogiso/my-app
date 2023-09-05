@@ -139,6 +139,216 @@ export default async function Home() {
           // width={400}
           // height={300}
         />
+        <Image
+          src="/images/image.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          loading="lazy"
+          layout="responsive"
+          objectFit="contain"
+        />
+        <Imgix
+          src="https://test-281330813.imgix.net/images/image.jpg"
+          imgixParams={{ ar: '3:2' }}
+          // width={400}
+          // height={300}
+        />
+        <Image
+          src="/images/image2.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          loading="lazy"
+          layout="responsive"
+          objectFit="contain"
+        />
+        <Imgix
+          src="https://test-281330813.imgix.net/images/image2.jpg"
+          imgixParams={{ ar: '3:2' }}
+          // width={400}
+          // height={300}
+        />
+        <Image
+          src="/images/image3.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          loading="lazy"
+          layout="responsive"
+          objectFit="contain"
+        />
+        <Imgix
+          src="https://test-281330813.imgix.net/images/image3.jpg"
+          imgixParams={{ ar: '3:2' }}
+          // width={400}
+          // height={300}
+        />
+        <Image
+          src="/images/image4.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          loading="lazy"
+          layout="responsive"
+          objectFit="contain"
+        />
+        <Imgix
+          src="https://test-281330813.imgix.net/images/image4.jpg"
+          imgixParams={{ ar: '3:2' }}
+          // width={400}
+          // height={300}
+        />
+        <Image
+          src="/images/image5.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          loading="lazy"
+          layout="responsive"
+          objectFit="contain"
+        />
+        <Imgix
+          src="https://test-281330813.imgix.net/images/image5.jpg"
+          imgixParams={{ ar: '3:2' }}
+          // width={400}
+          // height={300}
+        />
+        <Image
+          src="/images/image6.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          loading="lazy"
+          layout="responsive"
+          objectFit="contain"
+        />
+        <Imgix
+          src="https://test-281330813.imgix.net/images/image6.jpg"
+          imgixParams={{ ar: '3:2' }}
+          // width={400}
+          // height={300}
+        />
+        <Image
+          src="/images/image7.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          loading="lazy"
+          layout="responsive"
+          objectFit="contain"
+        />
+        <Imgix
+          src="https://test-281330813.imgix.net/images/image7.jpg"
+          imgixParams={{ ar: '3:2' }}
+          // width={400}
+          // height={300}
+        />
+        <Image
+          src="/images/image.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          loading="lazy"
+          layout="responsive"
+          objectFit="contain"
+        />
+        <Imgix
+          src="https://test-281330813.imgix.net/images/image.jpg"
+          imgixParams={{ ar: '3:2' }}
+          // width={400}
+          // height={300}
+        />
+        <Image
+          src="/images/image2.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          loading="lazy"
+          layout="responsive"
+          objectFit="contain"
+        />
+        <Imgix
+          src="https://test-281330813.imgix.net/images/image2.jpg"
+          imgixParams={{ ar: '3:2' }}
+          // width={400}
+          // height={300}
+        />
+        <Image
+          src="/images/image3.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          loading="lazy"
+          layout="responsive"
+          objectFit="contain"
+        />
+        <Imgix
+          src="https://test-281330813.imgix.net/images/image3.jpg"
+          imgixParams={{ ar: '3:2' }}
+          // width={400}
+          // height={300}
+        />
+        <Image
+          src="/images/image4.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          loading="lazy"
+          layout="responsive"
+          objectFit="contain"
+        />
+        <Imgix
+          src="https://test-281330813.imgix.net/images/image4.jpg"
+          imgixParams={{ ar: '3:2' }}
+          // width={400}
+          // height={300}
+        />
+        <Image
+          src="/images/image5.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          loading="lazy"
+          layout="responsive"
+          objectFit="contain"
+        />
+        <Imgix
+          src="https://test-281330813.imgix.net/images/image5.jpg"
+          imgixParams={{ ar: '3:2' }}
+          // width={400}
+          // height={300}
+        />
+        <Image
+          src="/images/image6.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          loading="lazy"
+          layout="responsive"
+          objectFit="contain"
+        />
+        <Imgix
+          src="https://test-281330813.imgix.net/images/image6.jpg"
+          imgixParams={{ ar: '3:2' }}
+          // width={400}
+          // height={300}
+        />
+        <Image
+          src="/images/image7.jpg"
+          alt="猫"
+          width={3}
+          height={2}
+          loading="lazy"
+          layout="responsive"
+          objectFit="contain"
+        />
+        <Imgix
+          src="https://test-281330813.imgix.net/images/image7.jpg"
+          imgixParams={{ ar: '3:2' }}
+          // width={400}
+          // height={300}
+        />
       </div>
     </main>
   );
