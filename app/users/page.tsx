@@ -5,9 +5,9 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import { Box, Heading } from '@radix-ui/themes';
 
 import { UserForm, UserList } from '@/_components/users';
-import { Users } from '@/_interfaces/User';
+import { User } from '@/_interfaces/User';
 
-async function getUsers(): Promise<Users[]> {
+async function getUsers(): Promise<User[]> {
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_DOMAIN}/users`);
 
   if (!response.ok) {

@@ -4,9 +4,9 @@ import { Table } from '@radix-ui/themes';
 import dayjs from 'dayjs';
 
 import { DATE } from '@/_constants/date';
-import { Users } from '@/_interfaces/User';
+import { User } from '@/_interfaces/User';
 
-export const UserList: FC<{ users: Users[] }> = ({ users }) => {
+export const UserList: FC<{ users: User[] }> = ({ users }) => {
   return (
     <Table.Root>
       <Table.Header>

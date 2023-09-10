@@ -6,7 +6,7 @@ import { Box, Text } from '@radix-ui/themes';
 import Image from 'next/image';
 import Imgix from 'react-imgix';
 
-import { Users } from './_interfaces/User';
+import { User } from './_interfaces/User';
 
 // async function getUsers(): Promise<Users[]> {
 //   const response = await fetch('http://localhost:3001/users');
@@ -19,7 +19,7 @@ import { Users } from './_interfaces/User';
 
 export default async function Home() {
   // const users = await getUsers();
-  const users: Users[] = [];
+  const users: User[] = [];
 
   return (
     <main className="max-w-5xl mx-auto mt-16">
