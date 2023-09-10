@@ -7,19 +7,18 @@ import { Heading } from '@radix-ui/themes';
 import { UserList } from '@/_components/users';
 import { Users } from '@/_interfaces/User';
 
-// async function getUsers(): Promise<Users[]> {
-//   const response = await fetch('http://localhost:3001/users');
+async function getUsers(): Promise<Users[]> {
+  const response = await fetch(`${process.env.API_DOMAIN}/users`);
 
-//   if (!response.ok) {
-//     throw new Error('ユーザー情報の取得に失敗しました');
-//   }
+  if (!response.ok) {
+    throw new Error('ユーザー情報の取得に失敗しました');
+  }
 
-//   return response.json();
-// }
+  return response.json();
+}
 
 export default async function Home() {
-  // const users = await getUsers();
-  const users: Users[] = [];
+  const users = await getUsers();
 
   return (
     <main className="max-w-5xl mx-auto mt-16 sm:px-4">
