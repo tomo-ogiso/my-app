@@ -8,7 +8,7 @@ import { UserForm, UserList } from '@/_components/users';
 import { User } from '@/_interfaces/User';
 
 async function getUsers(): Promise<User[]> {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_DOMAIN}/users`);
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_DOMAIN}/users`, { cache: 'no-store' });
 
   if (!response.ok) {
     throw new Error('ユーザー情報の取得に失敗しました');
