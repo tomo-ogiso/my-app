@@ -2,9 +2,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import '@radix-ui/themes/styles.css';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-import { Heading } from '@radix-ui/themes';
+import { Box, Heading } from '@radix-ui/themes';
 
-import { UserList } from '@/_components/users';
+import { UserForm, UserList } from '@/_components/users';
 import { Users } from '@/_interfaces/User';
 
 async function getUsers(): Promise<Users[]> {
@@ -25,6 +25,9 @@ export default async function Home() {
       <Heading as="h1" mb="2" ml="1">
         ユーザー一覧
       </Heading>
+      <Box mb="4">
+        <UserForm />
+      </Box>
       <UserList users={users} />
     </main>
   );
