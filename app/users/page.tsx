@@ -18,6 +18,7 @@ async function getUsers(): Promise<User[]> {
 }
 
 export default async function Home() {
+  // ユーザー情報取得API(/users)
   const users = await getUsers();
 
   return (
