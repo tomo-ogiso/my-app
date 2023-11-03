@@ -12,9 +12,7 @@ export default async function Home() {
     <main className="max-w-5xl mx-auto mt-16">
       <div className="max-w-[880px]">
         <Box className="flex justify-center">
-          <Link href={pagesPath.users.$url()} legacyBehavior>
-            <a>ユーザー一覧</a>あ
-          </Link>
+          <Link href={pagesPath.users.$url()}>ユーザー一覧</Link>
         </Box>
       </div>
     </main>
