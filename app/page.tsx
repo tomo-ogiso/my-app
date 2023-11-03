@@ -13,6 +13,7 @@ export default async function Home() {
       <div className="max-w-[880px]">
         <Box className="flex justify-center">
           <Link href={pagesPath.users.$url()}>ユーザー一覧</Link>
+          ここにユーザー情報を表示する
         </Box>
       </div>
     </main>
