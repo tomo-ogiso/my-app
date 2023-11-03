@@ -24,6 +24,7 @@ export const UserForm: FC = () => {
     resolver: zodResolver(schema),
     defaultValues: { name: '', email: '' },
   });
+  console.log('user');
 
   const onSubmit = async (data: UserFormType) => {
     try {
