@@ -19,7 +19,6 @@ async function getUsers(): Promise<User[]> {
 
 export default async function Home() {
   const users = await getUsers();
-  console.log('users: ', users);
 
   return (
     <main className="max-w-5xl mx-auto mt-16 sm:px-4">
