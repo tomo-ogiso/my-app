@@ -1,18 +1,16 @@
 'use client';
 
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Box, TextField } from '@radix-ui/themes';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 
-import { createUser } from '@/_api/createUser';
-import { FormBlock } from '@/_components/common';
-import { User } from '@/_interfaces/User';
+import { FormBlock } from '@/components/common';
 import { Button } from '@/components/ui/button';
-
-import { schema, UserFormType } from './schema';
+import { createUser } from '@/features/users/api';
+import { UserFormType, schema } from '@/features/users/schema';
 
 export const UserForm: FC = () => {
   const {
@@ -24,7 +22,6 @@ export const UserForm: FC = () => {
     resolver: zodResolver(schema),
     defaultValues: { name: '', email: '' },
   });
-  console.log('user');
 
   const onSubmit = async (data: UserFormType) => {
     try {
@@ -43,28 +40,6 @@ export const UserForm: FC = () => {
       console.log('error');
     }
   };
-
-  useEffect(() => {
-    const getUsers = async (): Promise<User[]> => {
-      try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_DOMAIN}/users`, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
-
-        const data: User[] = await res.json();
-
-        return data;
-      } catch {
-        console.log('error');
-        return [];
-      }
-    };
-
-    getUsers().then((res) => console.log(res));
-  }, []);
 
   return (
     <Box className="bg-slate-100 rounded-lg" p="3">

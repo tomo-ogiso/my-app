@@ -1,11 +1,7 @@
-import 'react-toastify/dist/ReactToastify.css';
-import '@radix-ui/themes/styles.css';
-import 'react-loading-skeleton/dist/skeleton.css';
-
 import { Box, Heading } from '@radix-ui/themes';
 
-import { UserForm, UserList } from '@/_components/users';
-import { User } from '@/_interfaces/User';
+import { UserForm, UserList } from '@/features/users/components';
+import { User } from '@/interfaces/User';
 
 async function getUsers(): Promise<User[]> {
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_DOMAIN}/users`, { cache: 'no-store' });

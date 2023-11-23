@@ -1,9 +1,13 @@
 import './globals.css';
+import 'react-toastify/dist/ReactToastify.css';
+import '@radix-ui/themes/styles.css';
+import 'react-loading-skeleton/dist/skeleton.css';
+
 import { Theme } from '@radix-ui/themes';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
-import { Providers } from './providers';
+import { Providers } from '@/components/Providers';
 
 const inter = Inter({ subsets: ['latin'] });
 

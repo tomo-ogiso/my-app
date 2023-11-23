@@ -1,7 +1,7 @@
 import { Heading } from '@radix-ui/themes';
 import Skeleton from 'react-loading-skeleton';
 
-import { SkeletonUserList } from '@/_components/users';
+import { SkeletonUserList } from '@/features/users/components';
 
 export default function Loading() {
   return (
