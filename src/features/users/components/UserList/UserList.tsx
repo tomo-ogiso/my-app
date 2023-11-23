@@ -3,8 +3,8 @@ import { FC } from 'react';
 import { Table } from '@radix-ui/themes';
 import dayjs from 'dayjs';
 
-import { DATE } from '@/_constants/date';
-import { User } from '@/_interfaces/User';
+import { DATE } from '@/constants/date';
+import { User } from '@/interfaces/User';
 
 export const UserList: FC<{ users: User[] }> = ({ users }) => {
   return (

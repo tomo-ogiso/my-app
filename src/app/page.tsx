@@ -1,11 +1,7 @@
-import 'react-toastify/dist/ReactToastify.css';
-import '@radix-ui/themes/styles.css';
-import 'react-loading-skeleton/dist/skeleton.css';
-
 import { Box } from '@radix-ui/themes';
 import Link from 'next/link';
 
-import { pagesPath } from '@/_utils/$path';
+import { pagesPath } from '@/utils/$path';
 
 export default async function Home() {
   return (
